@@ -1,0 +1,24 @@
+integer, parameter :: nscal = 4
+character (len=3), parameter   :: casename = 'lst'
+character (len=3), parameter , dimension(nscal) :: scalname = (/'phi','wal','vey','vez'/)
+!character (len=3), parameter , dimension(nscal) :: scalname = (/'phi','vey','vez'/)
+integer, parameter :: nx =  160, &
+                      ny =  160, &
+                      nz =  160
+real(8), parameter :: lx =  122.00d0, &
+                      ly =  122.00d0, &
+                      lz =  122.00d0
+real(8), parameter :: dx = lx/(1.*nx), &
+                      dy = ly/(1.*ny), &
+                      dz = lz/(1.*nz)
+real(8), parameter :: x0 = dx/2.d0, &
+                      y0 = dy/2.d0, &
+                      z0 = dz/2.d0
+real(8), parameter :: t0 = 0.d0
+real(8), parameter :: dt = 1.0d00
+!
+integer, parameter :: fldstart = 500 , &
+                      fldend   = 187500, &
+                      nskip    = 500
+integer, parameter :: fldinit  = 1
+
